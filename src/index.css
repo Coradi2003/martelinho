@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Barlow:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 8%;
+    --foreground: 40 20% 90%;
+
+    --card: 0 0% 12%;
+    --card-foreground: 40 20% 90%;
+
+    --popover: 0 0% 12%;
+    --popover-foreground: 40 20% 90%;
+
+    --primary: 43 89% 50%;
+    --primary-foreground: 0 0% 5%;
+
+    --secondary: 0 0% 16%;
+    --secondary-foreground: 40 20% 90%;
+
+    --muted: 0 0% 14%;
+    --muted-foreground: 40 10% 55%;
+
+    --accent: 43 89% 50%;
+    --accent-foreground: 0 0% 5%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 40 20% 20%;
+    --input: 0 0% 18%;
+    --ring: 43 89% 50%;
+
+    --radius: 0.5rem;
+
+    --gold: 43 89% 50%;
+    --gold-light: 43 89% 65%;
+    --gold-dark: 43 89% 35%;
+    --surface-dark: 0 0% 6%;
+    --surface-mid: 0 0% 10%;
+
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Barlow', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-body);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+  }
+}
+
+@layer utilities {
+  .text-gradient-gold {
+    @apply bg-clip-text text-transparent;
+    background-image: linear-gradient(135deg, hsl(43 89% 65%), hsl(43 89% 50%), hsl(35 80% 40%));
+  }
+  .bg-gradient-gold {
+    background-image: linear-gradient(135deg, hsl(43 89% 55%), hsl(43 89% 45%), hsl(35 80% 35%));
+  }
+  .bg-gradient-dark {
+    background-image: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 10%));
+  }
+  .shadow-gold {
+    box-shadow: 0 0 30px -5px hsl(43 89% 50% / 0.3);
+  }
+  .border-gold {
+    border-color: hsl(43 89% 50% / 0.3);
+  }
+  .glow-gold {
+    box-shadow: 0 0 20px hsl(43 89% 50% / 0.15), 0 0 60px hsl(43 89% 50% / 0.05);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
