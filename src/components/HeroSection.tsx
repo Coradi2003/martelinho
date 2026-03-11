@@ -61,7 +61,7 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Business card image */}
+          {/* Business card image - desktop */}
           <div
             className="hidden opacity-0 animate-fade-up lg:block"
             style={{ animationDelay: "1s" }}
@@ -72,6 +72,18 @@ const HeroSection = () => {
               className="w-[480px] rounded-lg shadow-2xl shadow-gold/20 animate-float"
             />
           </div>
+        </div>
+
+        {/* Business card image - mobile */}
+        <div
+          className="mt-8 flex justify-center opacity-0 animate-fade-up lg:hidden"
+          style={{ animationDelay: "1s" }}
+        >
+          <img
+            src={businessCard}
+            alt="Cartão de visita VM Martelinho de Ouro"
+            className="w-[320px] rounded-lg shadow-2xl shadow-gold/20 animate-float"
+          />
         </div>
       </div>
 
