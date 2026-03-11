@@ -1,4 +1,5 @@
 import heroBg from "@/assets/hero-bg.jpg";
+import businessCard from "@/assets/business-card.png";
 
 const HeroSection = () => {
   return (
@@ -11,51 +12,65 @@ const HeroSection = () => {
       </div>
 
       <div className="container relative z-10 pt-20">
-        <div className="max-w-2xl">
-          <div
-            className="mb-4 inline-block rounded-sm border border-gold/30 px-4 py-1.5 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.2s" }}
-          >
-            <span className="font-body text-xs uppercase tracking-[0.3em] text-primary">
-              Ceilândia Norte • DF
-            </span>
+        <div className="flex flex-col items-center gap-12 lg:flex-row lg:justify-between">
+          <div className="max-w-2xl">
+            <div
+              className="mb-4 inline-block rounded-sm border border-gold/30 px-4 py-1.5 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              <span className="font-body text-xs uppercase tracking-[0.3em] text-primary">
+                Ceilândia Norte • DF
+              </span>
+            </div>
+
+            <h1
+              className="mb-6 font-display text-5xl font-bold uppercase leading-tight tracking-tight opacity-0 animate-fade-up md:text-7xl"
+              style={{ animationDelay: "0.4s" }}
+            >
+              <span className="text-gradient-gold">Martelinho</span>
+              <br />
+              <span className="text-foreground">de Ouro</span>
+            </h1>
+
+            <p
+              className="mb-8 max-w-md font-body text-lg leading-relaxed text-foreground/70 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.6s" }}
+            >
+              Recupere a lataria do seu veículo sem perder a pintura original.
+              Profissional experiente com peças e serviços com garantia.
+            </p>
+
+            <div
+              className="flex flex-wrap gap-4 opacity-0 animate-fade-up"
+              style={{ animationDelay: "0.8s" }}
+            >
+              <a
+                href="https://wa.me/5561992876054?text=Olá! Gostaria de solicitar um orçamento."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 rounded-sm bg-gradient-gold px-8 py-3.5 font-display text-sm uppercase tracking-wider text-primary-foreground shadow-gold transition-transform hover:scale-105"
+              >
+                Solicitar Orçamento
+              </a>
+              <a
+                href="#servicos"
+                className="inline-flex items-center gap-2 rounded-sm border border-gold/30 px-8 py-3.5 font-display text-sm uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
+              >
+                Nossos Serviços
+              </a>
+            </div>
           </div>
 
-          <h1
-            className="mb-6 font-display text-5xl font-bold uppercase leading-tight tracking-tight opacity-0 animate-fade-up md:text-7xl"
-            style={{ animationDelay: "0.4s" }}
-          >
-            <span className="text-gradient-gold">Martelinho</span>
-            <br />
-            <span className="text-foreground">de Ouro</span>
-          </h1>
-
-          <p
-            className="mb-8 max-w-md font-body text-lg leading-relaxed text-foreground/70 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.6s" }}
-          >
-            Recupere a lataria do seu veículo sem perder a pintura original.
-            Profissional experiente com peças e serviços com garantia.
-          </p>
-
+          {/* Business card image */}
           <div
-            className="flex flex-wrap gap-4 opacity-0 animate-fade-up"
-            style={{ animationDelay: "0.8s" }}
+            className="hidden opacity-0 animate-fade-up lg:block"
+            style={{ animationDelay: "1s" }}
           >
-            <a
-              href="https://wa.me/5561992876054?text=Olá! Gostaria de solicitar um orçamento."
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 rounded-sm bg-gradient-gold px-8 py-3.5 font-display text-sm uppercase tracking-wider text-primary-foreground shadow-gold transition-transform hover:scale-105"
-            >
-              Solicitar Orçamento
-            </a>
-            <a
-              href="#servicos"
-              className="inline-flex items-center gap-2 rounded-sm border border-gold/30 px-8 py-3.5 font-display text-sm uppercase tracking-wider text-foreground transition-colors hover:border-primary hover:text-primary"
-            >
-              Nossos Serviços
-            </a>
+            <img
+              src={businessCard}
+              alt="Cartão de visita VM Martelinho de Ouro"
+              className="w-[480px] rounded-lg shadow-2xl shadow-gold/20 animate-float"
+            />
           </div>
         </div>
       </div>
