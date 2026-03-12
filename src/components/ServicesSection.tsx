@@ -1,6 +1,7 @@
 import serviceDent from "@/assets/service-dent.jpg";
 import serviceWindshield from "@/assets/service-windshield.jpg";
 import serviceGlass from "@/assets/service-glass.jpg";
+import imagemNova from "@/assets/imagem-nova.png";
 import { useEffect, useRef, useState } from "react";
 
 const services = [
@@ -64,7 +65,7 @@ const ServicesSection = () => {
             <div
               key={service.title}
               className={`group overflow-hidden rounded-lg border border-gold/10 bg-card transition-all duration-500 hover:border-primary/30 hover:glow-gold ${
-                visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
               }`}
               style={{ transitionDelay: `${i * 150}ms` }}
             >
@@ -86,6 +87,31 @@ const ServicesSection = () => {
               </div>
             </div>
           ))}
+
+          {/* New card below the middle one */}
+          <div
+            className={`group overflow-hidden rounded-lg border border-gold/10 bg-card transition-all duration-500 hover:border-primary/30 hover:glow-gold md:col-start-2 ${
+              visible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+            }`}
+            style={{ transitionDelay: "450ms" }}
+          >
+            <div className="relative h-56 overflow-hidden">
+              <img
+                src={imagemNova}
+                alt="Novo serviço"
+                className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-card via-transparent to-transparent" />
+            </div>
+            <div className="p-6">
+              <h3 className="mb-2 font-display text-xl font-semibold uppercase text-foreground">
+                Novo Serviço
+              </h3>
+              <p className="font-body text-sm leading-relaxed text-muted-foreground">
+                Descrição do novo serviço.
+              </p>
+            </div>
+          </div>
         </div>
 
         {/* Extra services grid */}
@@ -98,7 +124,7 @@ const ServicesSection = () => {
               <div
                 key={s}
                 className={`flex items-center gap-3 rounded-md border border-gold/5 bg-secondary/50 px-4 py-3 transition-all duration-500 ${
-                  visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-4"
+                  visible ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
                 }`}
                 style={{ transitionDelay: `${400 + i * 80}ms` }}
               >
